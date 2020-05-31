@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="b8480e50-60b2-48de-a926-c67de7c428bb" type="23" />
+            <attribute id="Name" value="MiniMemoryBuff" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="d023d7f5-b35a-4db9-af6e-20c6c3386598" type="23" />
+        </node>
+    </region>
+</save>

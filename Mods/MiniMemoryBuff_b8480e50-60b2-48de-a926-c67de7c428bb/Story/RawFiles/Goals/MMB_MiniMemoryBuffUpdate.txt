@@ -1,0 +1,30 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+DB_MMB_HasReceived((CHARACTERGUID)24a466e5-9f0c-41f6-b4dd-74443858cead);
+NOT DB_MMB_HasReceived((CHARACTERGUID)24a466e5-9f0c-41f6-b4dd-74443858cead); // So it compiles with correct type
+
+KBSECTION
+
+// No longer requires script extender. Below fixes save files mid playthrough.
+
+/* [OSITOOLS_ONLY]
+IF
+SavegameLoaded(_, _, _, _)
+AND
+DB_MMB_HasReceived(_Char)
+AND
+NRD_CharacterGetPermanentBoostInt(_Char, "Memory", _Mem)
+AND
+IntegerSubtract(_Mem, 2, _NewMem)
+THEN
+NRD_CharacterSetPermanentBoostInt(_Char, "Memory", _NewMem);
+CharacterAddAttribute(_Char, "Memory", 0);
+NOT DB_MMB_HasReceived(_Char);
+*/
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"
